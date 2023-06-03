@@ -1,15 +1,20 @@
 import { createI18n } from 'vue-i18n'
 import type { App } from 'vue'
 import type { I18n } from 'vue-i18n'
-import zh_CN from './lang/zh-CN'
-import zh_EN from './lang/zh-EN'
+import { getEnv } from '@utils/getEnv'
+import Ricky from './lang/Ricky'
 
+const { VITE_RESUME_OWNER } = getEnv()
+console.log('🚀 ~ file: index.ts:8 ~ RESUME_OWNER:', VITE_RESUME_OWNER)
+
+const authMap = {
+  樊富豪: 'ricky',
+}
 const messages = {
-  'zh-EN': zh_EN,
-  'zh-CN': zh_CN,
+  ricky: Ricky,
 }
 export const i18nOptions = {
-  locale: 'zh-CN',
+  locale: authMap[VITE_RESUME_OWNER as keyof typeof authMap],
   messages,
   legacy: false,
 }

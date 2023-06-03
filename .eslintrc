@@ -8,6 +8,7 @@
       {
         "order": ["template", "script", "style[lang]"]
       }
-    ]
+    ],
+    "no-restricted-syntax": "off"
   }
 }

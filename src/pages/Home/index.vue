@@ -1,32 +1,53 @@
 <template>
-  <h1>{{ t('hello.hi') }}</h1>
-  <el-select v-model="lang" class="m-2" placeholder="i18n" size="large">
-    <el-option
-      v-for="item in options"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value"
+  <div class="home">
+    <h1>当前简历模板所有者：{{ t('resumeOwner') }}</h1>
+    <el-switch
+      v-model="themeMode"
+      size="large"
+      active-text="dark"
+      inactive-text="light"
     />
-  </el-select>
-  <comp />
+    <el-select v-model="lang" class="m-2" placeholder="i18n" size="large">
+      <el-option
+        v-for="item in options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value"
+      />
+    </el-select>
+    <comp />
+  </div>
 </template>
 
 <script lang="ts" setup>
 import { useLocalesStore } from '@store/mouldes/locales'
 import { useI18n } from 'vue-i18n'
+import { useThemeStore } from '@store/mouldes/theme'
+import { storeToRefs } from 'pinia'
 import comp from './components/comp.vue'
 
+const themeMode = ref<boolean>(false)
+const themeStore = useThemeStore()
+watch(themeMode, (val) => {
+  themeStore.changeTheme()
+})
 const { lang } = toRefs(useLocalesStore())
 const { t } = useI18n()
 const options = [
   {
-    value: 'zh-EN',
-    label: '英语',
+    value: 'ricky',
+    label: '富豪',
     key: 0,
-  }, {
-    value: 'zh-CN',
-    label: '家乡话',
-    key: 1,
   },
 ]
 </script>
+
+<style scoped lang="scss">
+.home{
+  min-width: 1280px;
+  min-height: 980px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>

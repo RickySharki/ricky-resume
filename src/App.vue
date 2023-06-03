@@ -9,16 +9,16 @@ import { useLocalesStore } from '@store/mouldes/locales'
 const { lang } = toRefs(useLocalesStore())
 </script>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+<style lang="scss">
+html,
+body,
+#app,
+#master-container {
+  height: 100%;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: var(--bg-color);
+  color:var(--font-color)
 }
 </style>

@@ -4,7 +4,7 @@ import { vueRouters } from './glob'
 export const basicRoutes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/login',
+    redirect: '/home',
   },
   ...vueRouters(),
 ]

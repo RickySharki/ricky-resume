@@ -2,7 +2,6 @@ import type { RouteRecordRaw } from 'vue-router'
 import type { App } from 'vue'
 
 import { createRouter, createWebHistory } from 'vue-router'
-import { useUserInfoStore } from '@store/mouldes/user'
 import { basicRoutes } from './routes'
 
 // 白名单应该包含基本静态路由
@@ -33,13 +32,6 @@ export function resetRouter() {
   })
 }
 
-router.beforeEach((to, from, next) => {
-  const { token } = toRefs(useUserInfoStore())
-  if (!token.value && to.path !== '/login')
-    next({ path: '/login' })
-  else
-    next()
-})
 // config router
 // 配置路由器
 export function setupRouter(app: App<Element>) {
