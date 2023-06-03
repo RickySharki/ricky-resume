@@ -7,8 +7,8 @@ export const layoutCss = css`
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  border-left: 1px solid var(--font-color);
-  border-right: 1px solid var(--font-color);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
   .resume-header {
     display:flex; 
     .header-tabs {
