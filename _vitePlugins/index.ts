@@ -1,4 +1,3 @@
 import { autoImportPlugin } from './auto'
-import { mockPlugin } from './mock'
 
-export const vitePlugins = [...autoImportPlugin, ...mockPlugin]
+export const vitePlugins = [...autoImportPlugin]
