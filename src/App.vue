@@ -1,19 +1,19 @@
 <template>
   <el-config-provider :locale="lang">
-    <RouterView />
+    <Layout />
   </el-config-provider>
 </template>
 
 <script setup lang="ts">
 import { useLocalesStore } from '@store/mouldes/locales'
+import Layout from './layouts'
 const { lang } = toRefs(useLocalesStore())
 </script>
 
 <style lang="scss">
 html,
 body,
-#app,
-#master-container {
+#app {
   height: 100%;
   width: 100%;
   margin: 0 !important;

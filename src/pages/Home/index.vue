@@ -29,7 +29,7 @@ import comp from './components/comp.vue'
 const themeMode = ref<boolean>(false)
 const themeStore = useThemeStore()
 watch(themeMode, (val) => {
-  themeStore.changeTheme()
+  themeStore.toggleDark(val)
 })
 const { lang } = toRefs(useLocalesStore())
 const { t } = useI18n()
@@ -45,7 +45,7 @@ const options = [
 <style scoped lang="scss">
 .home{
   min-width: 1280px;
-  min-height: 980px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import './index.scss'
 import './theme.scss'
+import 'element-plus/theme-chalk/dark/css-vars.css'
 import App from './App.vue'
 import { setupRouter } from './router'
 import 'element-plus/dist/index.css'
