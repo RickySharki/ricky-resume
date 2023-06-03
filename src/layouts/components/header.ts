@@ -1,9 +1,12 @@
 import { ElAvatar, ElButton } from 'element-plus'
 import { useRouter } from 'vue-router'
-
+import { useThemeStore } from '@store/mouldes/theme'
+import { storeToRefs } from 'pinia'
 export default defineComponent({
   name: 'TabsHeader',
   setup: () => {
+    const themeStore = useThemeStore()
+    const { isDark } = storeToRefs(themeStore)
     const router = useRouter()
     const tabs = [{
       name: '首页',
@@ -21,9 +24,15 @@ export default defineComponent({
     const onChangeRoute = (route: string) => {
       router.push(route)
     }
+    const onChangeTheme = () => {
+      themeStore.toggleDark()
+    }
+    const iconTempalte = computed(() => isDark.value ? 'Sunny' : 'Moon')
     return {
       tabs,
       onChangeRoute,
+      onChangeTheme,
+      iconTempalte,
     }
   },
   render() {
@@ -45,7 +54,7 @@ export default defineComponent({
           }, item.name)
       }),
       ),
-      h(ElButton, { class: ['mr-10'], icon: 'Sunny', circle: true, size: 'large' }),
+      h(ElButton, { class: ['mr-10'], icon: this.iconTempalte, circle: true, size: 'large', onClick: () => this.onChangeTheme() }),
     ])
   },
 })

@@ -18,4 +18,11 @@ export const layoutCss = css`
       border-radius: 25px;
     }
   }
+  .main-container{
+    min-width: 1280px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `
