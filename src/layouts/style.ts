@@ -17,6 +17,9 @@ export const layoutCss = css`
       box-shadow: 1px 1px 3px var(--shadow-color);
       border-radius: 25px;
     }
+    #my-avatar{
+      transform: translate3d(-0.222222rem, 5rem, 0px) scale(1.5);
+    }
   }
   .main-container{
     min-width: 1280px;

@@ -2,9 +2,13 @@ import { ElAvatar, ElButton } from 'element-plus'
 import { useRouter } from 'vue-router'
 import { useThemeStore } from '@store/mouldes/theme'
 import { storeToRefs } from 'pinia'
+import { useEventListener } from '@vueuse/core'
+import auth from '../../assets/Rick_Auth.jpg'
+
 export default defineComponent({
   name: 'TabsHeader',
   setup: () => {
+    const avatarEl = ref<HTMLElement | null>(null)
     const themeStore = useThemeStore()
     const { isDark } = storeToRefs(themeStore)
     const router = useRouter()
@@ -28,18 +32,29 @@ export default defineComponent({
       themeStore.toggleDark()
     }
     const iconTempalte = computed(() => isDark.value ? 'Sunny' : 'Moon')
+
+    useEventListener(window, 'wheel', (e) => {
+      console.log('🚀 ~ file: header.ts:51 ~ useEventListener ~ e:', e)
+      const isScrollingDown = (e as any).wheelDeltaY < 0
+      // 根据滚轮滚动的方向调整元素的CSS属性
+      const scale = isScrollingDown ? 1 : 1.5
+      const down = isScrollingDown ? 0 : 5
+      avatarEl.value!.$el.style.transform = `translate3d(-0.222222rem, ${down}rem, 0px) scale(${scale})`
+    })
     return {
       tabs,
       onChangeRoute,
       onChangeTheme,
       iconTempalte,
+      auth,
+      avatarEl,
     }
   },
   render() {
     return h('div', {
       class: ['resume-header', 'w-full', 'justify-between', 'mt-10'],
     }, [
-      h(ElAvatar, { class: ['ml-10'], src: 'https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png' }),
+      h(ElAvatar, { id: 'my-avatar', class: ['ml-10'], src: this.auth, ref: 'avatarEl' }),
       h('div', {
         class: ['header-tabs', 'flex', 'justify-around', 'items-center'],
       },
