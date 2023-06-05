@@ -1,7 +1,34 @@
 <template>
-  <h1>about</h1>
+  <div class="w-full h-full px-4 py-8">
+    <el-card shadow="hover" class="mb-4">
+      <template #header>
+        个人信息
+      </template>
+      <div class="user-info grid grid-cols-3 grid-rows-2 gap-10">
+        <span>姓名：{{ userInfo.name }}</span><span>工作年限：{{ userInfo.workYear }}</span>
+        <span>毕业院校：{{ userInfo.school }}</span><span>联系电话：{{ userInfo.phone }}</span>
+        <span>个人邮箱：{{ userInfo.email }}</span><span>github：<el-link :href="userInfo.github" target="_blank">{{ userInfo.github }}</el-link></span>
+      </div>
+    </el-card>
+    <el-card shadow="hover" class="mb-4">
+      <template #header>
+        专业技能
+      </template>
+      <p v-for="(skill, index) in skills" :key="index" v-html="skill" />
+    </el-card>
+    <el-card shadow="hover">
+      <template #header>
+        项目经历
+      </template>
+      <p v-for="(project, index) in projects" :key="index" v-html="project" />
+    </el-card>
+  </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import ownerInfo from '../../ownerInfo/ricky'
+const { resume } = ownerInfo
+const { skills, userInfo, projects } = resume
+</script>
 
-  <style lang="scss"></style>
+<style lang="scss"></style>
