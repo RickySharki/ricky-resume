@@ -8,5 +8,6 @@
 //   process.env[key] = file[key]
 
 export const getEnv = () => {
+  console.log('import.meta.env', import.meta.env)
   return import.meta.env
 }

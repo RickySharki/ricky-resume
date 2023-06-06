@@ -7,11 +7,11 @@
 
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
-import RickyInfo from '../../ownerInfo/ricky'
+import { info } from '../../ownerInfo'
 import Intro from './components/intro.vue'
 import PicBox from './components/pic'
 const { t } = useI18n()
-const { url, desc } = RickyInfo
+const { url, desc } = info
 </script>
 
 <style scoped lang="scss">

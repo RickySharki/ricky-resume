@@ -1,4 +1,4 @@
-export default {
+export const info = {
   url: 'https://github.com/Sharkchili1015',
   desc: '一个热爱技术，热爱生活的年轻人，喜欢学习一切的最新的技术。',
   resume: {
@@ -29,4 +29,12 @@ export default {
       '熟悉Docker，了解Kubernetes',
     ],
   },
+  article: [
+    {
+      title: '浅淡前端单元测试',
+      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
+      img: 'ricky/vtest.png',
+      url: 'https://ppt-share.vercel.app/1',
+    },
+  ],
 }

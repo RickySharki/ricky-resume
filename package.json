@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
+    "build:ricky": "vue-tsc && vite build --mode ricky",
+    "build:yc": "vue-tsc && vite build --mode yc",
+    "build:ln": "vue-tsc && vite build --mode ln",
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"

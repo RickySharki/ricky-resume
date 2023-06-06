@@ -3,7 +3,11 @@ import { useRouter } from 'vue-router'
 import { useThemeStore } from '@store/mouldes/theme'
 import { storeToRefs } from 'pinia'
 import { useEventListener } from '@vueuse/core'
-import auth from '../../assets/Rick_Auth.jpg'
+// import { getEnv } from '@utils/getEnv'
+
+// const {VITE_USER_INFO} = getEnv()
+import auth from '../../assets/ricky/Rick_Auth.jpg'
+// const auth = await import(`${}`)
 
 export default defineComponent({
   name: 'TabsHeader',

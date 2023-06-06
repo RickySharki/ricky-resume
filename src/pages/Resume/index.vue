@@ -26,8 +26,8 @@
 </template>
 
 <script lang="ts" setup>
-import ownerInfo from '../../ownerInfo/ricky'
-const { resume } = ownerInfo
+import { info } from '../../ownerInfo'
+const { resume } = info
 const { skills, userInfo, projects } = resume
 </script>
 
