@@ -1,41 +1,20 @@
 <template>
   <div class="Carousel">
     <div class="Carousel-item" v-for="item in carouselList" :key="item.id" @mouseover="onMouseover(item)"
-      @mouseout="onMouseout(item)" :class="[currentIndex == item.id ? 'changeBig' : 'beSmall']">
+      @mouseout="onMouseout(item)" :class="[currentIndex == item.id ? 'changeBig' : '']">
       <img :src="item.image" alt="">
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-
-const carouselList = ref([
-  {
-    id: 1,
-    image: new URL('./images/1.webp', import.meta.url).href
-  },
-  {
-    id: 2,
-    image: new URL('./images/2.webp', import.meta.url).href
-  },
-  {
-    id: 3,
-    image: new URL('./images/3.webp', import.meta.url).href
-  },
-  {
-    id: 4,
-    image: new URL('./images/4.webp', import.meta.url).href
-  },
-  {
-    id: 5,
-    image: new URL('./images/5.webp', import.meta.url).href
-  },
-  {
-    id: 6,
-    image: new URL('./images/6.webp', import.meta.url).href
-  }
-])
-
+import { getImgUrl } from "@utils/imageTool"
+import { info } from '../../../ownerInfo'
+const { imageList } = info
+const carouselList = ref(imageList.map((item: any) => {
+  item.image = getImgUrl(item.path)
+  return item
+}))
 const currentIndex = ref<number | null>(null)
 const onMouseover = (item: any) => {
   currentIndex.value = item.id

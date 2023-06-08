@@ -37,4 +37,30 @@ export const info = {
       url: 'https://ppt-share.vercel.app/1',
     },
   ],
+  imageList: [
+    {
+      id: 1,
+      path: 'ricky/1.webp',
+    },
+    {
+      id: 2,
+      path: 'ricky/2.webp',
+    },
+    {
+      id: 3,
+      path: 'ricky/3.webp',
+    },
+    {
+      id: 4,
+      path: 'ricky/4.webp',
+    },
+    {
+      id: 5,
+      path: 'ricky/5.webp',
+    },
+    {
+      id: 6,
+      path: 'ricky/6.webp',
+    },
+  ],
 }
