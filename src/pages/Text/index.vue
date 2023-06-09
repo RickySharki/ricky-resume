@@ -13,9 +13,9 @@
 </template>
 
 <script lang="ts" setup>
-import { info } from '../../ownerInfo'
+import { importAsyncFiles } from '../../ownerInfo'
 
-const { article } = info
+const { article } = await importAsyncFiles()
 const getImgUrl = (path: string) => {
   return new URL(`../../assets/${path}`, import.meta.url).href
 }

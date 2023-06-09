@@ -26,8 +26,8 @@
 </template>
 
 <script lang="ts" setup>
-import { info } from '../../ownerInfo'
-const { resume } = info
+import { importAsyncFiles } from '../../ownerInfo'
+const { resume } = await importAsyncFiles()
 const { skills, userInfo, projects } = resume
 </script>
 

@@ -7,11 +7,11 @@
 
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
-import { info } from '../../ownerInfo'
+import { importAsyncFiles } from '../../ownerInfo'
 import Intro from './components/intro.vue'
 import PicBox from './components/pic'
 const { t } = useI18n()
-const { url, desc } = info
+const { url, desc } = await importAsyncFiles()
 </script>
 
 <style scoped lang="scss">

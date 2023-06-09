@@ -29,7 +29,6 @@
     "src/**/*.vue",
     "*.d.ts",
     "vite.config.ts",
-    "_vitePlugins/*.ts"
   ],
   "exclude": ["node_modules", ".vscode-test"],
   "references": [{ "path": "./tsconfig.node.json" }],

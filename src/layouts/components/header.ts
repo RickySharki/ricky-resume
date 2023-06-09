@@ -2,7 +2,6 @@ import { ElAvatar, ElButton } from 'element-plus'
 import { useRouter } from 'vue-router'
 import { useThemeStore } from '@store/mouldes/theme'
 import { storeToRefs } from 'pinia'
-import { useEventListener } from '@vueuse/core'
 // import { getEnv } from '@utils/getEnv'
 
 // const {VITE_USER_INFO} = getEnv()
@@ -37,14 +36,15 @@ export default defineComponent({
     }
     const iconTempalte = computed(() => isDark.value ? 'Sunny' : 'Moon')
 
-    useEventListener(window, 'wheel', (e) => {
-      console.log('🚀 ~ file: header.ts:51 ~ useEventListener ~ e:', e)
-      const isScrollingDown = (e as any).wheelDeltaY < 0
-      // 根据滚轮滚动的方向调整元素的CSS属性
-      const scale = isScrollingDown ? 1 : 1.5
-      const down = isScrollingDown ? 0 : 5
-      avatarEl.value!.$el.style.transform = `translate3d(-0.222222rem, ${down}rem, 0px) scale(${scale})`
-    })
+    // useEventListener(window, 'wheel', (e) => {
+    //   console.log('🚀 ~ file: header.ts:51 ~ useEventListener ~ e:', e)
+    //   const isScrollingDown = (e as any).wheelDeltaY < 0
+    //   // 根据滚轮滚动的方向调整元素的CSS属性
+    //   const scale = isScrollingDown ? 1 : 1.5
+    //   const down = isScrollingDown ? 0 : 5
+
+    //   avatarEl.value!.$el.style.transform = `translate3d(-0.222222rem, ${down}rem, 0px) scale(${scale})`
+    // })
     return {
       tabs,
       onChangeRoute,

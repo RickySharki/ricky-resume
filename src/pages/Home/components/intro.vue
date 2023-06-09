@@ -52,7 +52,6 @@
           data-nimg="1"
           class="inline h-4 w-4 rounded"
           style="color: transparent"
-          src="/api/favicon?url=zolplay.cn"
         ></span>前端开发工程师<svg
           width="0.95em"
           height="0.95em"
