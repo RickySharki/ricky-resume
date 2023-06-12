@@ -29,6 +29,7 @@ declare global {
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
   const getEnv: typeof import('./src/utils/getEnv')['getEnv']
+  const getImgUrl: typeof import('./src/utils/imageTool')['getImgUrl']
   const h: typeof import('vue')['h']
   const ignorableWatch: typeof import('@vueuse/core')['ignorableWatch']
   const inject: typeof import('vue')['inject']

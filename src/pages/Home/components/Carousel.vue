@@ -1,20 +1,32 @@
 <template>
   <div class="Carousel">
-    <div class="Carousel-item" v-for="item in carouselList" :key="item.id" @mouseover="onMouseover(item)"
-      @mouseout="onMouseout(item)" :class="[currentIndex == item.id ? 'changeBig' : '']">
+    <div
+      v-for="item in carouselList" :key="item.id" class="Carousel-item" :class="[currentIndex === item.id ? 'changeBig' : '']"
+      @mouseover="onMouseover(item)" @mouseout="onMouseout(item)"
+    >
       <img :src="item.image" alt="">
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { getImgUrl } from "@utils/imageTool"
-import { info } from '../../../ownerInfo'
-const { imageList } = info
-const carouselList = ref(imageList.map((item: any) => {
-  item.image = getImgUrl(item.path)
-  return item
-}))
+import { getImgUrl } from '@utils/imageTool'
+import type { Info } from 'src/model/user'
+import type { PropType } from 'vue'
+
+const props = defineProps({
+  userinfo: {
+    type: Object as PropType<Info>,
+    required: true,
+  },
+})
+
+const imageList = computed(() => props?.userinfo?.imageList || [])
+
+const carouselList = computed(() => imageList.value.map((item, index) => ({
+  id: index,
+  image: getImgUrl(item.path),
+})))
 const currentIndex = ref<number | null>(null)
 const onMouseover = (item: any) => {
   currentIndex.value = item.id
@@ -22,8 +34,6 @@ const onMouseover = (item: any) => {
 const onMouseout = (item: any) => {
   currentIndex.value = null
 }
-
-
 </script>
 
 <style lang="scss" scoped>

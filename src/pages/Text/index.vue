@@ -13,9 +13,11 @@
 </template>
 
 <script lang="ts" setup>
+import { usePromise } from '@utils/usePromise'
 import { importAsyncFiles } from '../../ownerInfo'
+const { result: userInfo } = usePromise(importAsyncFiles)
 
-const { article } = await importAsyncFiles()
+const article = computed(() => userInfo.value?.article || [])
 const getImgUrl = (path: string) => {
   return new URL(`../../assets/${path}`, import.meta.url).href
 }

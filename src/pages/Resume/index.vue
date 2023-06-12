@@ -26,9 +26,14 @@
 </template>
 
 <script lang="ts" setup>
+import { Resume } from '@model/user'
+import { usePromise } from '@utils/usePromise'
 import { importAsyncFiles } from '../../ownerInfo'
-const { resume } = await importAsyncFiles()
-const { skills, userInfo, projects } = resume
+const { result: myInfo } = usePromise(importAsyncFiles)
+const resume = computed(() => myInfo.value?.resume)
+const userInfo = computed(() => resume.value?.userInfo)
+const skills = computed(() => resume.value?.skills)
+const projects = computed(() => resume.value?.projects)
 </script>
 
 <style lang="scss"></style>
