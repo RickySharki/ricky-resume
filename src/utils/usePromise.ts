@@ -71,7 +71,6 @@ function usePromise<T, TArgs extends any[] = []>(
       Promise.resolve(func(...args))
         .then((r) => {
           result.value = r as any
-          debugger
           if (receiveCallbacks.length > 0)
             receiveCallbacks.forEach(callback => callback(r))
 

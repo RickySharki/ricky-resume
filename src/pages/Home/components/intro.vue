@@ -1,5 +1,5 @@
 <template>
-  <div class="introduce">
+  <div class="introduce mt-8">
     <div class="text-4xl">
       <span>{{ str }}</span>
       <span>{{ owner }}</span>
@@ -43,7 +43,6 @@
           data-state="closed"
           :href="linkUrl"
         >
-
           前端开发工程师
           <svg
             width="0.95em"
@@ -62,10 +61,12 @@
               stroke-linejoin="round"
             /></svg></a><br>{{ desc }}</span>
     </p>
+    <icon />
   </div>
 </template>
 
 <script lang="ts" setup>
+import icon from './icon.vue'
 const props = defineProps({
   owner: String,
   linkUrl: String,

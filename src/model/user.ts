@@ -4,6 +4,7 @@ export interface LoginForm {
 }
 
 export interface Info {
+  avatar: string
   url: string
   desc: string
   resume: Resume

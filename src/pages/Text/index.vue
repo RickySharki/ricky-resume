@@ -13,9 +13,10 @@
 </template>
 
 <script lang="ts" setup>
-import { usePromise } from '@utils/usePromise'
-import { importAsyncFiles } from '../../ownerInfo'
-const { result: userInfo } = usePromise(importAsyncFiles)
+import { useUserStore } from '@store/mouldes/user'
+import { storeToRefs } from 'pinia'
+const store = storeToRefs(useUserStore())
+const { userInfo } = store
 
 const article = computed(() => userInfo.value?.article || [])
 const getImgUrl = (path: string) => {
