@@ -4,14 +4,20 @@ export interface LoginForm {
 }
 
 export interface Info {
-  avatar: string
-  url: string
-  desc: string
+  mainInfo: MainInfo
   resume: Resume
   article: Article[]
   imageList: ImageList[]
 }
 
+export interface MainInfo {
+  avatar: string
+  url: string
+  desc: string
+  githubImg: string
+  emailUrl: string
+  juejinUrl: string
+}
 export interface ImageList {
   id: number
   path: string

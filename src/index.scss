@@ -6,3 +6,7 @@ body {
 .el-button {
   border-color:var(--font-color)
 }
+::selection {
+  background-color: rgb(132, 204, 22);
+  color: black;
+}

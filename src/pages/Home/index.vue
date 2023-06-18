@@ -1,10 +1,10 @@
 <template>
   <div class="home w-full ml-15">
     <div class="my-avatar">
-      <el-avatar id="avatar" :src="getImgUrl(userInfo!.avatar)" size="large" />
+      <el-avatar id="avatar" :src="getImgUrl(mainInfo?.avatar)" size="large" />
     </div>
     <div class="mian-info w-full">
-      <Intro :owner="t('resumeOwner')" :link-url="userInfo?.url" :desc="userInfo?.desc" />
+      <Intro :owenr="t('resumeOwner')" :main-info="mainInfo" />
       <Carousel class="carouselStyle" :userinfo="userInfo!" />
     </div>
   </div>
@@ -16,11 +16,12 @@ import { useUserStore } from '@store/mouldes/user'
 import { storeToRefs } from 'pinia'
 import { getImgUrl } from '@utils/imageTool'
 import Intro from './components/intro.vue'
-import Carousel from './components/Carousel.vue'
+import Carousel from './components/carousel.vue'
 
 const { t } = useI18n()
 const store = storeToRefs(useUserStore())
 const { userInfo } = store
+const { mainInfo } = userInfo.value!
 </script>
 
 <style scoped lang="scss">
@@ -31,6 +32,7 @@ const { userInfo } = store
       transition: all 59s cubic-bezier(0.34, 0, 0.84, 1) 0.1s;
     }
   }
+  height: 86vh;
 }
 
 .carouselStyle {

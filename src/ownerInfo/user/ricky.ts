@@ -1,7 +1,12 @@
 export const info = {
-  avatar: 'ricky/Rick_Auth.jpg',
-  url: 'https://github.com/Sharkchili1015',
-  desc: '一个热爱技术，热爱生活的年轻人，喜欢学习一切的最新的技术。',
+  mainInfo: {
+    avatar: 'ricky/Rick_Auth.jpg',
+    url: 'https://github.com/Sharkchili1015',
+    desc: '一个热爱技术，热爱生活的年轻人，喜欢学习一切的最新的技术。',
+    githubImg: 'ricky/github.png',
+    emailUrl: 'mailto:fufufan35@gamil.com',
+    juejinUrl: 'https://juejin.cn/user/1469396572452855',
+  },
   resume: {
     userInfo: {
       name: '樊富豪',
@@ -37,31 +42,73 @@ export const info = {
       img: 'ricky/vtest.png',
       url: 'https://ppt-share.vercel.app/1',
     },
+    {
+      title: '浅淡前端单元测试',
+      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
+      img: 'ricky/vtest.png',
+      url: 'https://ppt-share.vercel.app/1',
+    },
+    {
+      title: '浅淡前端单元测试',
+      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
+      img: 'ricky/vtest.png',
+      url: 'https://ppt-share.vercel.app/1',
+    },
+    {
+      title: '浅淡前端单元测试',
+      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
+      img: 'ricky/vtest.png',
+      url: 'https://ppt-share.vercel.app/1',
+    },
+    {
+      title: '浅淡前端单元测试',
+      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
+      img: 'ricky/vtest.png',
+      url: 'https://ppt-share.vercel.app/1',
+    },
+    {
+      title: '浅淡前端单元测试',
+      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
+      img: 'ricky/vtest.png',
+      url: 'https://ppt-share.vercel.app/1',
+    },
+    {
+      title: '浅淡前端单元测试',
+      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
+      img: 'ricky/vtest.png',
+      url: 'https://ppt-share.vercel.app/1',
+    },
+    {
+      title: '浅淡前端单元测试',
+      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
+      img: 'ricky/vtest.png',
+      url: 'https://ppt-share.vercel.app/1',
+    },
   ],
   imageList: [
     {
       id: 1,
-      path: 'ricky/1.webp',
+      path: 'ricky/1.jpg',
     },
     {
       id: 2,
-      path: 'ricky/2.webp',
+      path: 'ricky/2.jpg',
     },
     {
       id: 3,
-      path: 'ricky/3.webp',
+      path: 'ricky/3.jpg',
     },
     {
       id: 4,
-      path: 'ricky/4.webp',
+      path: 'ricky/4.jpg',
     },
     {
       id: 5,
-      path: 'ricky/5.webp',
+      path: 'ricky/5.jpg',
     },
     {
       id: 6,
-      path: 'ricky/6.webp',
+      path: 'ricky/6.jpg',
     },
   ],
 }

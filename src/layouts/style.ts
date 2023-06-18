@@ -2,7 +2,6 @@ import { css } from '@emotion/css'
 
 export const layoutCss = css`
   width: 80rem;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

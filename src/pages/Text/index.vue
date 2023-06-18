@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full px-4 py-8">
+  <div class="w-full h-full px-4 py-8 mt-12 grid grid-cols-1 gap-6 sm:mt-20 lg:grid-cols-2 lg:gap-8">
     <el-card v-for="(text, index) in article" :key="index" shadow="hover" class="mb-4 cursor-pointer" @click="toText(text.url)">
       <template #header>
         {{ text.title }}

@@ -49,7 +49,7 @@ export default defineComponent({
     return h(
       'div',
       {
-        class: ['resume-header', 'w-full', 'justify-between', 'mt-10', 'mb-20'],
+        class: ['resume-header', 'w-full', 'justify-between', 'mt-10'],
       },
       [
         // h(ElAvatar, {
