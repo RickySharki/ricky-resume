@@ -9,7 +9,7 @@
 <script lang="ts" setup>
 import type { MainInfo } from '@model/user'
 import type { PropType } from 'vue'
-import icon from './Icon.vue'
+import icon from './IconLink.vue'
 import TopFiled from './TopFiledes.vue'
 import Summary from './TopSummary.vue'
 defineProps({
