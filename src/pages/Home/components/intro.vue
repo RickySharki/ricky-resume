@@ -9,9 +9,9 @@
 <script lang="ts" setup>
 import type { MainInfo } from '@model/user'
 import type { PropType } from 'vue'
-import icon from './icon.vue'
-import TopFiled from './topFiled.vue'
-import Summary from './summary.vue'
+import icon from './Icon.vue'
+import TopFiled from './TopFiled.vue'
+import Summary from './Summary.vue'
 defineProps({
   mainInfo: Object as PropType<MainInfo>,
   owenr: String,

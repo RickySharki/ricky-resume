@@ -36,7 +36,6 @@
 import type { MainInfo } from '@model/user'
 import type { PropType } from 'vue'
 import { getImgUrl } from '@utils/imageTool'
-import { openLink } from '@utils/openLink'
 import OpenLinkIcon from './openLinkIcon.vue'
 defineProps({
   mainInfo: {
