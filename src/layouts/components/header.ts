@@ -2,11 +2,6 @@ import { ElButton } from 'element-plus'
 import { useRouter } from 'vue-router'
 import { useThemeStore } from '@store/mouldes/theme'
 import { storeToRefs } from 'pinia'
-// import { getEnv } from '@utils/getEnv'
-
-// const {VITE_USER_INFO} = getEnv()
-// import auth from '../../assets/ricky/Rick_Auth.jpg'
-// const auth = await import(`${}`)
 
 export default defineComponent({
   name: 'TabsHeader',
@@ -35,14 +30,21 @@ export default defineComponent({
     const onChangeTheme = () => {
       themeStore.toggleDark()
     }
-    const iconTempalte = computed(() => (isDark.value ? 'Sunny' : 'Moon'))
-
+    const iconTemplate = computed(() => (isDark.value ? 'Sunny' : 'Moon'))
+    const renderThemeButton = () => {
+      return h(ElButton, {
+        class: ['mr-10'],
+        icon: iconTemplate.value,
+        circle: true,
+        size: 'large',
+        onClick: () => onChangeTheme(),
+      })
+    }
     return {
       tabs,
       onChangeRoute,
-      onChangeTheme,
-      iconTempalte,
       avatarEl,
+      renderThemeButton,
     }
   },
   render() {
@@ -52,14 +54,6 @@ export default defineComponent({
         class: ['resume-header', 'w-full', 'justify-between', 'mt-10'],
       },
       [
-        // h(ElAvatar, {
-        //   id: 'my-avatar',
-        //   class: ['ml-10', 'cursor-pointer'],
-        // style: { width: `${50}px`, height: `${50}px` },
-        //   src: this.auth,
-        //   ref: 'avatarEl',
-        //   onClick: () => this.onChangeRoute('/Home'),
-        // }),
         h('div', {
           style: { width: `${50}px`, height: `${50}px`, opacity: 0 },
         }),
@@ -88,13 +82,7 @@ export default defineComponent({
             )
           }),
         ),
-        h(ElButton, {
-          class: ['mr-10'],
-          icon: this.iconTempalte,
-          circle: true,
-          size: 'large',
-          onClick: () => this.onChangeTheme(),
-        }),
+        this.renderThemeButton(),
       ],
     )
   },
