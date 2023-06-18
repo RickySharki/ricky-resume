@@ -16,7 +16,7 @@ import { useUserStore } from '@store/mouldes/user'
 import { storeToRefs } from 'pinia'
 import { getImgUrl } from '@utils/imageTool'
 import Intro from '@pages/Home/components/Intro.vue'
-import Carousel from '@pages/Home/components/Carousel.vue'
+import Carousel from '@pages/Home/components/CarouselList.vue'
 
 const { t } = useI18n()
 const store = storeToRefs(useUserStore())

@@ -36,41 +36,41 @@ const onMouseout = (item: any) => {
 }
 </script>
 
-<style lang="scss" scoped>
-.Carousel {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  <style lang="scss" scoped>
+  .Carousel {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 
-  &-item {
-    width: 296px;
-    height: 18rem;
-    opacity: 0.85;
-    filter: grayscale(0.5);
+    &-item {
+      width: 296px;
+      height: 18rem;
+      opacity: 0.85;
+      filter: grayscale(0.5);
 
-    img {
-      height: 100%;
-      width: 100%;
-      border-radius: 1.5rem;
-      object-fit: cover;
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 1.5rem;
+        object-fit: cover;
+      }
     }
   }
-}
 
-@keyframes beBig {
-  from {
-    width: 296px;
+  @keyframes beBig {
+    from {
+      width: 296px;
+    }
+
+    to {
+      width: 408px;
+    }
   }
 
-  to {
+  .changeBig {
     width: 408px;
+    animation: beBig 0.2s linear;
+    opacity: 1;
+    filter: grayscale(0)
   }
-}
-
-.changeBig {
-  width: 408px;
-  animation: beBig 0.2s linear;
-  opacity: 1;
-  filter: grayscale(0)
-}
-</style>
+  </style>
