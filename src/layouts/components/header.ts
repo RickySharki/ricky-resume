@@ -1,4 +1,4 @@
-// import { ElAvatar, ElButton } from 'element-plus'
+import { ElButton } from 'element-plus'
 import { useRouter } from 'vue-router'
 import { useThemeStore } from '@store/mouldes/theme'
 import { storeToRefs } from 'pinia'
