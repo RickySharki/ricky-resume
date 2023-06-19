@@ -24,8 +24,8 @@ export default defineComponent({
         route: '/Text',
       },
     ]
-    const onChangeRoute = (route: string) => {
-      router.push(route)
+    const onChangeRoute = (page: Record<string, string>) => {
+      router.push(page.route)
     }
     const onChangeTheme = () => {
       themeStore.toggleDark()
@@ -76,7 +76,7 @@ export default defineComponent({
                 // on: {
                 //   click: () => this.push(item.route),
                 // },
-                onClick: () => this.onChangeRoute(item.route),
+                onClick: () => this.onChangeRoute(item),
               },
               item.name,
             )

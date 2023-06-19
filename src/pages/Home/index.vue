@@ -22,6 +22,7 @@ const { t } = useI18n()
 const store = storeToRefs(useUserStore())
 const { userInfo } = store
 // const { mainInfo } = userInfo.value
+
 const mainInfo = computed(() => userInfo.value?.mainInfo)
 </script>
 

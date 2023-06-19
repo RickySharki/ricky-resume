@@ -2,6 +2,7 @@ import type { RouteRecordRaw } from 'vue-router'
 import type { App } from 'vue'
 
 import { createRouter, createWebHistory } from 'vue-router'
+import { usePageTitle } from '@hooks/useTitle'
 import { basicRoutes } from './routes'
 
 // 白名单应该包含基本静态路由
@@ -31,7 +32,9 @@ export function resetRouter() {
       router.hasRoute(name) && router.removeRoute(name)
   })
 }
-
+router.beforeEach((to) => {
+  usePageTitle(to.meta.title as string)
+})
 // config router
 // 配置路由器
 export function setupRouter(app: App<Element>) {
