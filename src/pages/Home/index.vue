@@ -1,7 +1,7 @@
 <template>
   <div class="home w-full ml-15">
     <div class="my-avatar">
-      <el-avatar id="avatar" :src="getImgUrl(mainInfo?.avatar)" size="large" />
+      <el-avatar id="avatar" :src="getImgUrl(mainInfo?.avatar || '')" size="large" />
     </div>
     <div class="mian-info w-full">
       <Intro :owenr="t('resumeOwner')" :main-info="mainInfo" />
@@ -21,7 +21,8 @@ import Carousel from '@pages/Home/components/CarouselList.vue'
 const { t } = useI18n()
 const store = storeToRefs(useUserStore())
 const { userInfo } = store
-const { mainInfo } = userInfo.value!
+// const { mainInfo } = userInfo.value
+const mainInfo = computed(() => userInfo.value?.mainInfo)
 </script>
 
 <style scoped lang="scss">
