@@ -2,6 +2,7 @@
   <div class="home w-full ml-15">
     <div class="my-avatar">
       <el-avatar id="avatar" :src="getImgUrl(mainInfo?.avatar || '')" size="large" />
+      <vite />
     </div>
     <div class="mian-info w-full">
       <Intro :owenr="t('resumeOwner')" :main-info="mainInfo" />
@@ -17,12 +18,22 @@ import { storeToRefs } from 'pinia'
 import { getImgUrl } from '@utils/imageTool'
 import Intro from '@pages/Home/components/Introduce.vue'
 import Carousel from '@pages/Home/components/CarouselList.vue'
-
+import { svgFileList } from '@utils/importSvg'
+import { usePromise } from '@utils/usePromise'
+import { useThemeStore } from '@store/mouldes/theme'
+import vite from 'src/assets/svg/dark/vite.vue'
 const { t } = useI18n()
+const themeStore = storeToRefs(useThemeStore())
+const { isDark } = themeStore
 const store = storeToRefs(useUserStore())
 const { userInfo } = store
 // const { mainInfo } = userInfo.value
+const { result, refresh: getSvgIcon } = usePromise(isDark => svgFileList(isDark))
 
+watch(() => isDark.value, (newVal, oldVal) => {
+  getSvgIcon(newVal)
+}, { immediate: true })
+console.log('🚀 ~ file: index.vue:27 ~ result:', result)
 const mainInfo = computed(() => userInfo.value?.mainInfo)
 </script>
 
