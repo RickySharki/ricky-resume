@@ -42,7 +42,6 @@ function usePromise<T, TArgs extends any[] = []>(
     immediate: true,
     clearOnRefresh: false,
   })
-
   const result = ref<T | null>(start)
   const error = ref<unknown>(null)
   const isLoading = ref(innerOption.immediate)

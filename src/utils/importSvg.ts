@@ -4,6 +4,5 @@ export const svgFileList = async (isDark: boolean): Promise<any[]> => {
     const svg = await import(`../assets/svg/${isDark ? 'dark' : 'light'}/${iconName}.vue`)
     return svg.default
   }))
-  debugger
   return svgList
 }

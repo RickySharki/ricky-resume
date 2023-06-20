@@ -21,8 +21,8 @@
         <template #reference>
           <OpenLinkIcon title="前端开发工程师" :link-url="mainInfo?.url" />
         </template>
-        <a target="_blank" :href="mainInfo!.url">
-          <el-image class="cursor-pointer" :src="getImgUrl(mainInfo!.githubImg)" />
+        <a target="_blank" :href="mainInfo?.url">
+          <el-image class="cursor-pointer" :src="getImgUrl(mainInfo?.githubImg || '')" />
         </a>
       </el-popover>
 
