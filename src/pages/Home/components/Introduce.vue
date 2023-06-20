@@ -3,6 +3,7 @@
     <TopFiled :owner="owenr" />
     <Summary :main-info="mainInfo" />
     <icon :github-url="mainInfo?.url" :email-url="mainInfo?.emailUrl" :juejin-url="mainInfo?.juejinUrl" />
+    <PowerBy />
   </div>
 </template>
 
@@ -12,6 +13,8 @@ import type { PropType } from 'vue'
 import icon from './IconLink.vue'
 import TopFiled from './TopFiledes.vue'
 import Summary from './TopSummary.vue'
+import PowerBy from './PowerBy.vue'
+
 defineProps({
   mainInfo: Object as PropType<MainInfo>,
   owenr: String,

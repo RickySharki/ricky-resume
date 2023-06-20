@@ -5,8 +5,6 @@ const { VITE_USER_INFO } = getEnv()
 
 export const importAsyncFiles = async (): Promise<Info> => {
   const { info } = await import(`./user/${VITE_USER_INFO}.ts`)
-  debugger
-  console.log('🚀 ~ file: index.ts:9 ~ importAsyncFiles ~ info:', info)
   return info
 }
 
