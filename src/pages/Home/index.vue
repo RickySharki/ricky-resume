@@ -1,11 +1,11 @@
 <template>
   <div class="home w-full ml-15">
     <div class="my-avatar">
-      <el-avatar id="avatar" :src="getImgUrl(mainInfo?.avatar || '')" size="large" />
+      <el-avatar id="avatar" :src="getImgUrl(mainInfo?.avatar || '')" size="large" data-aos="fade-up" />
     </div>
     <div class="mian-info w-full">
-      <Intro :owenr="t('resumeOwner')" :main-info="mainInfo" />
-      <Carousel class="carouselStyle" :userinfo="userInfo!" />
+      <Intro :owenr="t('resumeOwner')" :main-info="mainInfo" data-aos="fade-up" />
+      <Carousel class="carouselStyle" :userinfo="userInfo!" data-aos="fade-up" />
     </div>
   </div>
 </template>
