@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-full px-4 py-8">
-    <el-card shadow="hover" class="mb-4">
+    <el-card shadow="hover" class="mb-4" data-aos="fade-up">
       <template #header>
         个人信息
       </template>
@@ -10,13 +10,13 @@
         <span>个人邮箱：{{ myInfo?.email }}</span><span>github：<el-link :href="myInfo?.github" target="_blank">{{ myInfo?.github }}</el-link></span>
       </div>
     </el-card>
-    <el-card shadow="hover" class="mb-4">
+    <el-card shadow="hover" class="mb-4" data-aos="fade-up">
       <template #header>
         专业技能
       </template>
       <p v-for="(skill, index) in skills" :key="index" v-html="skill" />
     </el-card>
-    <el-card shadow="hover">
+    <el-card shadow="hover" data-aos="fade-up">
       <template #header>
         项目经历
       </template>

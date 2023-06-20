@@ -52,6 +52,7 @@ export default defineComponent({
       'div',
       {
         class: ['resume-header', 'w-full', 'justify-between', 'mt-10'],
+        'data-aos':'fade-up'
       },
       [
         h('div', {
