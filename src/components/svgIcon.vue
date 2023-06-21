@@ -1,11 +1,14 @@
 <template>
-  <component :is="path" />
+  <Icon :icon="icon!" />
 </template>
 
 <script setup lang="ts">
+import { Icon } from '@iconify/vue'
+import type { IconifyIcon } from '@iconify/vue'
+import type { PropType } from 'vue'
 defineProps({
-  path: {
-    type: String,
+  icon: {
+    type: String as PropType<IconifyIcon | string>,
     require: true,
   },
 })

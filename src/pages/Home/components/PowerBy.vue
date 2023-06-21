@@ -1,24 +1,28 @@
 <template>
-  <svgIcon v-for="icon in result" :key="icon" :path="icon" />
+  <div class="powerBy flex items-center mt-6">
+    <span>POWERBY:</span>
+    <svgIcon v-for="icon in icons" :key="icon" :icon="icon" />
+  </div>
 </template>
 
 <script lang='ts' setup>
 import svgIcon from 'src/components/svgIcon.vue'
-import { svgFileList } from '@utils/importSvg'
-import { usePromise } from '@utils/usePromise'
 import { useThemeStore } from '@store/mouldes/theme'
 import { storeToRefs } from 'pinia'
-
+import { darkIcon, lightIcon, normalIcon } from '@utils/powerByIcon'
 const themeStore = storeToRefs(useThemeStore())
 const { isDark } = themeStore
 
-const { result, refresh: getSvgIcon } = usePromise(isDark => svgFileList(isDark))
-
-watch(() => isDark.value, (newVal) => {
-  getSvgIcon(newVal)
-}, { immediate: true })
-console.log('🚀 ~ file: index.vue:27 ~ result:', result)
+const icons = computed(() => {
+  const icon = isDark.value ? lightIcon : darkIcon
+  return icon.concat(normalIcon)
+})
 </script>
 
 <style lang='scss'>
+.powerBy{
+  >svg {
+    margin-left: 0.5rem;
+  }
+}
 </style>
