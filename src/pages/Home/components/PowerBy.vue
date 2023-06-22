@@ -1,7 +1,7 @@
 <template>
   <div class="powerBy flex items-center mt-6">
     <span>POWERBY:</span>
-    <svgIcon v-for="icon in icons" :key="icon" :icon="icon" />
+    <svgIcon v-for="(icon, index) in icons" :key="icon" :icon="icon" :link="powerByLink[index]" />
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import svgIcon from 'src/components/svgIcon.vue'
 import { useThemeStore } from '@store/mouldes/theme'
 import { storeToRefs } from 'pinia'
-import { darkIcon, lightIcon, normalIcon } from '@utils/powerByIcon'
+import { darkIcon, lightIcon, normalIcon, powerByLink } from '@utils/powerByIcon'
 const themeStore = storeToRefs(useThemeStore())
 const { isDark } = themeStore
 
@@ -21,7 +21,7 @@ const icons = computed(() => {
 
 <style lang='scss'>
 .powerBy{
-  >svg {
+  >a {
     margin-left: 0.5rem;
   }
 }

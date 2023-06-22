@@ -13,4 +13,14 @@ export const lightIcon = [
   'skill-icons:windicss-light',
 ]
 
-export const normalIcon = ['logos:vueuse', 'skill-icons:typescript']
+export const normalIcon = ['logos:vueuse', 'skill-icons:typescript', 'logos:pinia']
+
+export const powerByLink = [
+  'https://cn.vitejs.dev/',
+  'https://vercel.com/',
+  'https://cn.vuejs.org/',
+  'https://windicss.org/',
+  'https://vueuse.org/',
+  'https://www.typescriptlang.org/',
+  'https://pinia.vuejs.org/zh/',
+]

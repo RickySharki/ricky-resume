@@ -48,7 +48,7 @@ const mainInfo = computed(() => userInfo.value?.mainInfo)
 }
 
 .carouselStyle {
-  bottom: 5rem;
+  top: 35rem;
   left: 0;
   position: absolute;
 }
