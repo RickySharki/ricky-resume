@@ -17,8 +17,8 @@ export const info = {
       github: 'https://github.com/Sharkchili1015',
     },
     skills: [
-      '熟悉<b>Vue</b>全家桶，了解React全家桶',
-      '熟悉TypeScript，了解JavaScript',
+      '熟练使用<code>Vue</code>以及周边生态，如<code>Pinia</code>、<code>VueRouter</code>、<code>VueUse</code>、<code>Vite</code>、<code>Vitest</code>等',
+      '在过往工作中一直使用<code>TypeScript</code>构建项目，对于<code>TypeScript</code>有一定的了解，能够使用类型体操进行类型推导',
       '熟悉Node.js，了解Java',
       '熟悉Webpack，了解Rollup',
       '熟悉Git，了解SVN',
