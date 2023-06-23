@@ -7,7 +7,6 @@
       animate__fadeInRight: isVisible && cardKey % 2 !== 0,
       animate__fadeInLeft: isVisible && cardKey % 2 === 0,
     }"
-    :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
     @click="toText(text.url)"
   >
     <template #header>
