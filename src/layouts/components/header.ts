@@ -51,8 +51,7 @@ export default defineComponent({
     return h(
       'div',
       {
-        'class': ['resume-header', 'w-full', 'justify-between', 'mt-10'],
-        'data-aos': 'fade-up',
+        class: ['resume-header', 'w-full', 'justify-between', 'mt-10'],
       },
       [
         h('div', {

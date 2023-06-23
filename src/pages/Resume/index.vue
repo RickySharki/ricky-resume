@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full h-full px-4 py-8">
-    <el-card shadow="hover" class="mb-4" data-aos="fade-up">
+  <div class="w-full h-full px-4 py-8 resume">
+    <el-card shadow="hover" class="mb-4 animate__animated  animate__backInUp">
       <template #header>
         个人信息
       </template>
@@ -10,13 +10,14 @@
         <span>个人邮箱：{{ myInfo?.email }}</span><span>github：<el-link :href="myInfo?.github" target="_blank">{{ myInfo?.github }}</el-link></span>
       </div>
     </el-card>
-    <el-card shadow="hover" class="mb-4" data-aos="fade-up">
+    <el-card shadow="hover" class="mb-4 animate__animated  animate__backInUp">
       <template #header>
-        专业技能
+        <SubHeader :title="{ normalTitle: '专业技能', hoverTitle: 'Skills' }" />
       </template>
       <p v-for="(skill, index) in skills" :key="index" v-html="skill" />
+      <!-- <HighLightCode v-for="(skill, index) in skills" :key="index" :code="skill" /> -->
     </el-card>
-    <el-card shadow="hover" data-aos="fade-up">
+    <el-card shadow="hover" class="animate__animated  animate__backInUp">
       <template #header>
         项目经历
       </template>
@@ -28,6 +29,8 @@
 <script lang="ts" setup>
 import { useUserStore } from '@store/mouldes/user'
 import { storeToRefs } from 'pinia'
+import SubHeader from './components/SubHeader.vue'
+
 const store = storeToRefs(useUserStore())
 const { userInfo } = store
 const resume = computed(() => userInfo.value?.resume)
@@ -36,4 +39,13 @@ const skills = computed(() => resume.value?.skills)
 const projects = computed(() => resume.value?.projects)
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.resume{
+  font-family: "Open Sans", sans-serif;
+  code{
+    /* color: #9cdcfe; */
+    color: var(--code--color);
+    font-weight: 600;
+  }
+}
+</style>

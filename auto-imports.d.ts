@@ -65,6 +65,7 @@ declare global {
   const onUpdated: typeof import('vue')['onUpdated']
   const openLink: typeof import('./src/utils/openLink')['openLink']
   const pausableWatch: typeof import('@vueuse/core')['pausableWatch']
+  const powerByLink: typeof import('./src/utils/powerByIcon')['powerByLink']
   const provide: typeof import('vue')['provide']
   const push: typeof import('./src/hooks/setRouter')['push']
   const reactify: typeof import('@vueuse/core')['reactify']

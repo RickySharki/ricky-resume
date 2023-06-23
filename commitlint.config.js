@@ -25,7 +25,7 @@ export default {
       'always',
       ['ci', 'docs', 'feat', 'fix', 'perf', 'refactor', 'build', 'chore', 'revert', 'style', 'test'],
     ],
-    'type-empty': [2, 'never'], // <type> 不能为空
+    'type-empty': [2], // <type> 不能为空
     // 'type-case': [2, 'always', 'lower-case'], // <type>格式小写
     'type-case': [0],
     'scope-empty': [0],

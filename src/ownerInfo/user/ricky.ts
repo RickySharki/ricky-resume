@@ -2,9 +2,9 @@ export const info = {
   mainInfo: {
     avatar: 'ricky/Rick_Auth.jpg',
     url: 'https://github.com/Sharkchili1015',
-    desc: '一个热爱技术，热爱生活的年轻人，喜欢学习一切的最新的技术。',
+    desc: '一个热爱技术，热爱生活的年轻人，喜欢尝试最新、有趣的技术',
     githubImg: 'ricky/github.png',
-    emailUrl: 'mailto:fufufan35@gamil.com',
+    emailUrl: 'mailto:fufufan35@gmail.com',
     juejinUrl: 'https://juejin.cn/user/1469396572452855',
   },
   resume: {
@@ -17,13 +17,13 @@ export const info = {
       github: 'https://github.com/Sharkchili1015',
     },
     skills: [
-      '熟练使用<code>Vue</code>以及周边生态，如<code>Pinia</code>、<code>VueRouter</code>、<code>VueUse</code>、<code>Vite</code>、<code>Vitest</code>等',
-      '在过往工作中一直使用<code>TypeScript</code>构建项目，对于<code>TypeScript</code>有一定的了解，能够使用类型体操进行类型推导',
-      '熟悉Node.js，了解Java',
-      '熟悉Webpack，了解Rollup',
-      '熟悉Git，了解SVN',
-      '熟悉Linux，了解Windows',
-      '熟悉Docker，了解Kubernetes',
+      '- 熟练使用<code>Vue</code>以及周边生态，如<code>Pinia</code>、<code>VueRouter</code>、<code>VueUse</code>、<code>Vite</code>、<code>Vitest</code>等',
+      '- 在过往工作中一直使用<code>TypeScript</code>构建项目，对于<code>TypeScript</code>有一定的了解，能够使用类型体操进行类型推导',
+      '- 熟练使用<code>uniapp</code>进行多端开发，负责过公司小程序端与h5端的主要开发工作',
+      '- 熟悉<code>Jest</code>、<code>Vitest</code>,通过前端单元测试以及<code>Typesrcipt</code>类型限制，提高代码开发质量',
+      '- 熟悉<code>VSCODE-Plugin</code>插件开发，能够快速开发<code>VSCODE</code>插件',
+      '- 熟悉<code>IDEA-Plugin</code>插件开发，能够配合后端开发人员，快速开发<code>IDEA</code>插件',
+      '- 对于<code>webpack</code>、<code>vite</code>、<code>rollup</code>等打包工具有一定的了解',
     ],
     projects: [
       '熟悉<b>Vue</b>全家桶，了解React全家桶',

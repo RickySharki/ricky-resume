@@ -1,14 +1,16 @@
 html[data-theme="light"] {
-    --bg-color: #fafafa;
-    --layout-bg:white;
-    --font-color:black;
-    --shadow-color:#ccc;
-    --border-color:#ccc;
+  --bg-color: #fafafa;
+  --layout-bg: white;
+  --font-color: black;
+  --shadow-color: #ccc;
+  --border-color: #ccc;
+  --code--color: #68217a;
 }
 
 html[data-theme="dark"] {
-    --bg-color: #000212;
-    --font-color:rgb(244 244 245/0.9);
-    --shadow-color:#ccc;
-    --border-color:#202230;
+  --bg-color: #000212;
+  --font-color: rgb(244 244 245/0.9);
+  --shadow-color: #ccc;
+  --border-color: #202230;
+  --code--color: #9cdcfe;
 }
