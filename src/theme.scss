@@ -1,10 +1,11 @@
 html[data-theme="light"] {
   --bg-color: #fafafa;
   --layout-bg: white;
-  --font-color: black;
+  --font-color: #060606;
   --shadow-color: #ccc;
   --border-color: #ccc;
-  --code--color: #68217a;
+  --code--color: #4672fe;
+  --hover-border-color: #4672fe;
 }
 
 html[data-theme="dark"] {
@@ -13,4 +14,5 @@ html[data-theme="dark"] {
   --shadow-color: #ccc;
   --border-color: #202230;
   --code--color: #9cdcfe;
+  --hover-border-color: aqua;
 }

@@ -26,13 +26,44 @@ export const info = {
       '- 对于<code>webpack</code>、<code>vite</code>、<code>rollup</code>等打包工具有一定的了解',
     ],
     projects: [
-      '熟悉<b>Vue</b>全家桶，了解React全家桶',
-      '熟悉TypeScript，了解JavaScript',
-      '熟悉Node.js，了解Java',
-      '熟悉Webpack，了解Rollup',
-      '熟悉Git，了解SVN',
-      '熟悉Linux，了解Windows',
-      '熟悉Docker，了解Kubernetes',
+      {
+        company: '中科九度空间信息有限公司',
+        time: '2020-10-10',
+        content: [
+          {
+            title: '主要负责业务',
+            content: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+          },
+        ],
+      },
+      {
+        company: '中科九度空间信息有限公司',
+        time: '2020-10-10',
+        content: [
+          {
+            title: '主要负责业务',
+            content: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+          },
+        ],
+      }, {
+        company: '中科九度空间信息有限公司',
+        time: '2020-10-10',
+        content: [
+          {
+            title: '主要负责业务',
+            content: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+          },
+        ],
+      }, {
+        company: '中科九度空间信息有限公司',
+        time: '2020-10-10',
+        content: [
+          {
+            title: '主要负责业务',
+            content: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+          },
+        ],
+      },
     ],
   },
   article: [

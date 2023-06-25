@@ -33,7 +33,7 @@ export interface Article {
 export interface Resume {
   userInfo: UserInfo
   skills: string[]
-  projects: string[]
+  projects: Experience[]
 }
 
 export interface UserInfo {
@@ -43,4 +43,15 @@ export interface UserInfo {
   email: string
   phone: string
   github: string
+}
+
+export interface Experience {
+  company: string
+  time: string
+  content: Content[]
+}
+
+interface Content {
+  title: string
+  content: string
 }
