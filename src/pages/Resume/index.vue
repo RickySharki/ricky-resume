@@ -23,7 +23,7 @@
       </template>
       <!-- <p v-for="(project, index) in projects" :key="index" v-html="project" /> -->
       <!-- <HighLightCode v-for="(project, index) in projects" :key="index" :code="project" /> -->
-      <WorkProjects :experience-array="projects" />
+      <WorkProjects :experience-array="projects!" />
     </el-card>
   </div>
 </template>
