@@ -43,7 +43,7 @@ export const info = {
           {
             title: '前端开发工程师',
             content:
-              '主要负责公司小程序、h5、pc端、vscode插件、idea插件的前端业务.<br><code>小程序</code>:负责模块包括<br>- 登录注册<br>- 事项详情<br>- 筛选列表<br>- 消息评论<br>使用技术栈<code>uniapp</code>、<code>vue</code>、<code>Typescript</code><br><code>h5</code>:将uniapp中的事项详情页、筛选列表页差异化打包为h5页面,配合运维通过ngix配置，将移动端访问pc页面重定向至h5页面，优化用户使用体验<br><code>pc端</code>:负责模块包括<br>- 系统自研时间组件的开发与维护<br>- 事项详情业务维护<br>- 系统自研编辑器的维护<br>- 效能筛选页（图表页）<br>,使用技术栈<code>vue2.7</code>、<code>storybook</code>、<code>Typescript</code>、<code>Jest</code>、<code>Pinia</code><br><code>vscode插件</code>:负责模块包括<br>- MergeRequest模块<br>- gitlab集成模块<br>- 筛选列表模块<br>- 消息评论模块<br>使用技术栈<code>vue3</code>、<code>Typescript</code>、<code>Pinia</code><br><code>idea插件</code>:负责模块包括<br>- MergeRequest模块<br>- 筛选列表模块<br>- 消息评论模块<br>- gitlab集成模块<br>使用技术栈<code>vue</code>、<code>Typescript</code>、<code>Pinia</code>',
+              '主要负责公司小程序、h5、pc端、vscode插件、idea插件的前端业务.<br><code>小程序</code>:负责模块包括<br>- 登录注册<br>- 事项详情<br>- 筛选列表<br>- 消息评论<br>使用技术栈<code>uniapp</code>、<code>vue</code>、<code>Typescript</code><br><code>h5</code>:将uniapp中的事项详情页、筛选列表页差异化打包为h5页面,配合运维通过nginx配置，将移动端访问pc页面重定向至h5页面，优化用户使用体验<br><code>pc端</code>:负责模块包括<br>- 系统自研时间组件的开发与维护<br>- 事项详情业务维护<br>- 系统自研编辑器的维护<br>- 效能筛选页（图表页）<br>,使用技术栈<code>vue2.7</code>、<code>storybook</code>、<code>Typescript</code>、<code>Jest</code>、<code>Pinia</code><br><code>vscode插件</code>:负责模块包括<br>- MergeRequest模块<br>- gitlab集成模块<br>- 筛选列表模块<br>- 消息评论模块<br>使用技术栈<code>vue3</code>、<code>Typescript</code>、<code>Pinia</code><br><code>idea插件</code>:负责模块包括<br>- MergeRequest模块<br>- 筛选列表模块<br>- 消息评论模块<br>- gitlab集成模块<br>使用技术栈<code>vue</code>、<code>Typescript</code>、<code>Pinia</code>',
           },
         ],
       },
