@@ -18,6 +18,7 @@ export const layoutCss = css`
     }
   }
   .main-container {
+    min-height:100vh;
     min-width: 1280px;
     height: 100%;
     display: flex;

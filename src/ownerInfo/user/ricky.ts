@@ -52,49 +52,7 @@ export const info = {
   article: [
     {
       title: '浅淡前端单元测试',
-      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
-      img: 'ricky/vtest.png',
-      url: 'https://ppt-share.vercel.app/1',
-    },
-    {
-      title: '浅淡前端单元测试',
-      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
-      img: 'ricky/vtest.png',
-      url: 'https://ppt-share.vercel.app/1',
-    },
-    {
-      title: '浅淡前端单元测试',
-      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
-      img: 'ricky/vtest.png',
-      url: 'https://ppt-share.vercel.app/1',
-    },
-    {
-      title: '浅淡前端单元测试',
-      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
-      img: 'ricky/vtest.png',
-      url: 'https://ppt-share.vercel.app/1',
-    },
-    {
-      title: '浅淡前端单元测试',
-      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
-      img: 'ricky/vtest.png',
-      url: 'https://ppt-share.vercel.app/1',
-    },
-    {
-      title: '浅淡前端单元测试',
-      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
-      img: 'ricky/vtest.png',
-      url: 'https://ppt-share.vercel.app/1',
-    },
-    {
-      title: '浅淡前端单元测试',
-      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
-      img: 'ricky/vtest.png',
-      url: 'https://ppt-share.vercel.app/1',
-    },
-    {
-      title: '浅淡前端单元测试',
-      desc: '记一次前端团队内部的技术分享，从vitest+typescript来讲解前端单元测试的基本概念，以及如何在项目中使用单元测试。',
+      desc: '记一次前端团队内部的技术分享',
       img: 'ricky/vtest.png',
       url: 'https://ppt-share.vercel.app/1',
     },
