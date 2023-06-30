@@ -7,11 +7,15 @@
       placement="top"
     >
       <el-card>
-        <h4>{{ experience.company }}</h4>
+        <div class="flex justify-start items-center">
+          <h4 v-html="experience.company" />
+          <h4 class="ml-2">
+            前端开发工程师
+          </h4>
+        </div>
         <!-- <p v-for="content in experience.content">{{ com }}</p> -->
-        <div v-for="(content, i) in experience.content" :key="i">
-          <h4>{{ content.title }}</h4>
-          <p>{{ content.content }}</p>
+        <div v-for="(content, i) in experience.content" :key="i" class="mt-2">
+          <p v-html="content.content" />
         </div>
       </el-card>
     </el-timeline-item>
@@ -31,6 +35,6 @@ defineProps({
 
 <style lang="scss" scoped>
 .project-time-line {
-    padding-inline-start: 10px;
+  padding-inline-start: 10px;
 }
 </style>
