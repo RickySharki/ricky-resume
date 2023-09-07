@@ -19,7 +19,16 @@ body,
   margin: 0 !important;
   padding: 0 !important;
   background-color: var(--bg-color);
-  color:var(--font-color);
-  background: url(../public/bg.svg);
+  color: var(--font-color);
+  background-image: url(../public/bg.svg);
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  /*滚动条里面的小方块，能向上向下移动*/
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--container-bg-color);
+    opacity: 0.5;
+  }
 }
 </style>
