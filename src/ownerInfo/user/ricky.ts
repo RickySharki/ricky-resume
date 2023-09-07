@@ -2,7 +2,7 @@ export const info = {
   mainInfo: {
     avatar: 'ricky/Rick_Auth.jpg',
     url: 'https://github.com/Sharkchili1015',
-    desc: '一个热爱技术，热爱生活的年轻人，喜欢尝试最新、有趣的技术',
+    desc: '一个热爱技术,热爱生活,喜欢尝试最新、有趣的技术的年轻人，',
     githubImg: 'ricky/github.png',
     emailUrl: 'mailto:fufufan35@gmail.com',
     juejinUrl: 'https://juejin.cn/user/1469396572452855',
