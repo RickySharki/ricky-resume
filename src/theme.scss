@@ -6,6 +6,7 @@ html[data-theme="light"] {
   --border-color: #ccc;
   --code--color: #4672fe;
   --hover-border-color: #4672fe;
+  --container-bg-color: rgb(255, 255, 255);
 }
 
 html[data-theme="dark"] {
@@ -15,4 +16,5 @@ html[data-theme="dark"] {
   --border-color: #202230;
   --code--color: #9cdcfe;
   --hover-border-color: aqua;
+  --container-bg-color: rgb(29, 32, 33);;
 }

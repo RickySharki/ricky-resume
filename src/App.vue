@@ -19,6 +19,7 @@ body,
   margin: 0 !important;
   padding: 0 !important;
   background-color: var(--bg-color);
-  color:var(--font-color)
+  color:var(--font-color);
+  background: url(../public/bg.svg);
 }
 </style>

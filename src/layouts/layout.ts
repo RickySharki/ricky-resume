@@ -9,7 +9,7 @@ export default defineComponent({
   },
   render() {
     return h('div', {
-      class: ['main-layout', layoutCss],
+      class: ['main-layout container-bg', layoutCss],
     }, [
       h(TabsHeader),
       h(MainCore),

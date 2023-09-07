@@ -19,7 +19,6 @@ const alias: Record<string, string> = {
   '@utils': resolve(__dirname, 'src', 'utils'),
   '@model': resolve(__dirname, 'src', 'model'),
   'mock': resolve(__dirname, 'mock'),
-
 }
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -49,11 +48,13 @@ export default defineConfig({
           filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
           globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
         },
-        resolvers: [ElementPlusResolver(), // Auto import icon components
+        resolvers: [
+          ElementPlusResolver(), // Auto import icon components
           // 自动导入图标组件
           IconsResolver({
             prefix: 'Icon',
-          })],
+          }),
+        ],
       }),
       Components({
         dirs: ['src/components'],
@@ -64,6 +65,17 @@ export default defineConfig({
       }),
     ],
   ],
+  build: {
+    cssCodeSplit: true,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        // 生产环境时移除console
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+  },
   resolve: {
     alias,
   },
