@@ -82,6 +82,9 @@ devDependencies:
   '@vueuse/router':
     specifier: ^9.10.0
     version: 9.10.0(vue-router@4.1.6)(vue@3.2.45)
+  adm-zip:
+    specifier: ^0.5.9
+    version: 0.5.9
   animate.css:
     specifier: ^4.1.1
     version: 4.1.1
@@ -1633,6 +1636,11 @@ packages:
     resolution: {integrity: sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+    dev: true
+
+  /adm-zip@0.5.9:
+    resolution: {integrity: sha512-s+3fXLkeeLjZ2kLjCBwQufpI5fuN+kIGBxu6530nVQZGVol0d7Y/M88/xw9HGGUcJjKf8LutN3VPRUBq6N7Ajg==}
+    engines: {node: '>=6.0'}
     dev: true
 
   /aggregate-error@3.1.0:
