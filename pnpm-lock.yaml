@@ -8,9 +8,6 @@ dependencies:
   '@element-plus/icons-vue':
     specifier: ^2.0.10
     version: 2.0.10(vue@3.2.45)
-  '@highlightjs/vue-plugin':
-    specifier: ^2.1.0
-    version: 2.1.0(highlight.js@11.8.0)(vue@3.2.45)
   '@types/lodash-es':
     specifier: ^4.17.6
     version: 4.17.6
@@ -990,16 +987,6 @@ packages:
     resolution: {integrity: sha512-TSogMPVxbRe77QCj1dt8NmRiJasPvuc+eT5jnJ6YpLqgOD2zXc5UA3S1qwybN+GVCDNdKfpKy1oj8RpzLJvh6A==}
     dependencies:
       '@floating-ui/core': 1.1.0
-    dev: false
-
-  /@highlightjs/vue-plugin@2.1.0(highlight.js@11.8.0)(vue@3.2.45):
-    resolution: {integrity: sha512-E+bmk4ncca+hBEYRV2a+1aIzIV0VSY/e5ArjpuSN9IO7wBJrzUE2u4ESCwrbQD7sAy+jWQjkV5qCCWgc+pu7CQ==}
-    peerDependencies:
-      highlight.js: ^11.0.1
-      vue: ^3
-    dependencies:
-      highlight.js: 11.8.0
-      vue: 3.2.45
     dev: false
 
   /@humanwhocodes/config-array@0.11.8:

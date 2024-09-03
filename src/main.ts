@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import './index.scss'
 import './theme.scss'
 import 'element-plus/theme-chalk/dark/css-vars.css'
-import hljsVuePlugin from '@highlightjs/vue-plugin'
 import ElementPlus from 'element-plus'
 import App from './App.vue'
 import { setupRouter } from './router'
@@ -21,6 +20,6 @@ function init() {
   setupStore(app)
   setupI18n(app)
   setupDireactive(app)
-  app.use(hljsVuePlugin).use(ElementPlus).mount('#app')
+  app.use(ElementPlus).mount('#app')
 }
 init()

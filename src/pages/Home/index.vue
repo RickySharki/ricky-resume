@@ -29,8 +29,8 @@ const { userInfo } = store
 // const { mainInfo } = userInfo.value
 const { result, refresh: getSvgIcon } = usePromise(isDark => svgFileList(isDark))
 
-watch(() => isDark.value, () => {
-  getSvgIcon()
+watch(() => isDark.value, (newVal) => {
+  getSvgIcon(newVal)
 }, { immediate: true })
 console.log('🚀 ~ file: index.vue:27 ~ result:', result)
 const mainInfo = computed(() => userInfo.value?.mainInfo)

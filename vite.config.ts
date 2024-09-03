@@ -133,6 +133,9 @@ export default defineConfig({
           'element-plus': 'ElementPlus',
         }),
       ],
+      output: {
+        format: 'es',
+      },
     },
   },
 })
