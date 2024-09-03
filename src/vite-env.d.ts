@@ -4,3 +4,6 @@ declare module "*.vue" {
     const component: DefineComponent<{}, {}, any>
     export default component
   }
+  
+  // 声明 Service Worker
+  declare var self: ServiceWorkerGlobalScope;

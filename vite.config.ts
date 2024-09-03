@@ -5,10 +5,14 @@ import vue from '@vitejs/plugin-vue'
 import WindiCSS from 'vite-plugin-windicss'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
-
+import viteCompression from 'vite-plugin-compression'
+import { chunkSplitPlugin } from 'vite-plugin-chunk-split'
+import viteImagemin from 'vite-plugin-imagemin'
+import externalGlobals from 'rollup-plugin-external-globals'
+import { visualizer } from 'rollup-plugin-visualizer'
 /** 设置别名 */
 const alias: Record<string, string> = {
   'src': resolve(__dirname, 'src'),
@@ -25,7 +29,11 @@ export default defineConfig({
   plugins: [
     vue(),
     WindiCSS(),
+    viteCompression(),
     [
+      visualizer({
+        filename: 'dist/stats.html',
+      }),
       AutoImport({
         // targets to transform
         include: [
@@ -49,7 +57,6 @@ export default defineConfig({
           globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
         },
         resolvers: [
-          ElementPlusResolver(), // Auto import icon components
           // 自动导入图标组件
           IconsResolver({
             prefix: 'Icon',
@@ -58,10 +65,45 @@ export default defineConfig({
       }),
       Components({
         dirs: ['src/components'],
-        resolvers: [ElementPlusResolver()],
       }),
       Icons({
         autoInstall: true,
+      }),
+      chunkSplitPlugin({
+        customSplitting: {
+          lodash: [/lodash-es/],
+          components: [/src\/components/],
+          info: [/src\/ownerInfo/],
+          vendor: [/node_modules/],
+          elementPlus: [/element-plus/],
+        },
+      }),
+      viteImagemin({
+        gifsicle: {
+          optimizationLevel: 7,
+          interlaced: false,
+        },
+        optipng: {
+          optimizationLevel: 7,
+        },
+        mozjpeg: {
+          quality: 75, // 调整质量
+        },
+        pngquant: {
+          quality: [0.6, 0.8], // 调整质量范围
+          speed: 4,
+        },
+        svgo: {
+          plugins: [
+            {
+              name: 'removeViewBox',
+            },
+            {
+              name: 'removeEmptyAttrs',
+              active: false,
+            },
+          ],
+        },
       }),
     ],
   ],
@@ -81,6 +123,16 @@ export default defineConfig({
     open: true,
     proxy: {
       '/api': 'http://localhost:8808',
+    },
+  },
+  build: {
+    rollupOptions: {
+      external: ['element-plus'],
+      plugins: [
+        externalGlobals({
+          'element-plus': 'ElementPlus',
+        }),
+      ],
     },
   },
 })
